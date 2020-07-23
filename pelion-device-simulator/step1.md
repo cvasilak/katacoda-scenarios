@@ -3,5 +3,4 @@
 `echo [[HOST_IP]]`{{execute}}
 
 ## URL
-
-`echo [[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]`{{execute}}
+`echo https://[[HOST_SUBDOMAIN]]-7829-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/view/peliondm`{{execute}}
