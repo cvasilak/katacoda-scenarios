@@ -1,6 +1,2 @@
-## IP Address
-
-`echo [[HOST_IP]]`{{execute}}
-
-## URL
-`echo https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/view/peliondm`{{execute}}
+# Run Simulator
+`docker run -it --net host -e CLOUD_SDK_API_KEY=ak_1MDE1ODc3OGRhNTYwMDI0MjBhMDE0YzExMDAwMDAwMDA017227858f3d7a1e3dc12ae7000000006TyjLKpyMpgCIeATQYR1I0KKgpwsMFCw pelion/device-simulator`{{execute}}

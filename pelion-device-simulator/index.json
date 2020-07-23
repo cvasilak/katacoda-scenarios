@@ -23,9 +23,10 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-iframe-split"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "docker",
+    "port": 7829
   }
 }
