@@ -23,10 +23,10 @@
     }
   },
   "environment": {
-    "hideintro": true,
+    "hideintro": false,
     "showdashboard": true,
     "dashboards": [{"name": "Simulator", "port": 7829}],
-    "uilayout": "terminal"
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "ubuntu",
