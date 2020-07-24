@@ -23,7 +23,11 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe"
+    "hideintro": true,
+    "showdashboard": true,
+    "dashboards": [{"name": "Simulator", "port": 7829}],
+    "terminals": [{"name": "Terminal", "target": "host01"}],
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu",
