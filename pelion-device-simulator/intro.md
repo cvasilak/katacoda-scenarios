@@ -1,1 +1,2 @@
-# Intro
+# IoT Connection Tutorial
+In this scenario, you will securely connect a simulated board to Pelion Device Management and learn how to interact with it using Lightweight Machine-to-Machine (LwM2M) protocol.
