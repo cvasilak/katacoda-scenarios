@@ -1,6 +1,6 @@
 {
   "title": "Pelion Device Management Connection Tutorial",
-  "description": "A tutorial to exercise Pelion Device Management using a device simulator.",
+  "description": "A tutorial to interact with Pelion Device Management using a device simulator.",
   "difficulty": "Beginner",
   "time": "10 minutes",
   "details": {
