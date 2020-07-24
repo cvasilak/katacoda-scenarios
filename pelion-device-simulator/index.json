@@ -1,8 +1,8 @@
 {
-  "title": "Pelion Device Simulator",
+  "title": "IoT Connection Tutorial",
   "description": "A scenario to testbed Pelion Device Management using pelion-device-simulator",
   "difficulty": "Beginner",
-  "time": "30 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
