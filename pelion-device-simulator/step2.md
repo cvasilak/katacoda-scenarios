@@ -1,5 +1,5 @@
 ## Launch Simulator
-Let's assign the _API_Key_ retrieved from the previous step to a shell variable for easy reference:
+Let's assign the **API_Key** retrieved from the previous step to a shell variable for easy reference. Copy the key to your clipboard and then click on the command below to fill it in the terminal. Once down paste the key and press <kb>Enter<kb>
 
 `export API_KEY=`{{execute no-newline}}
 
