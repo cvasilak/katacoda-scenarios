@@ -1,4 +1,4 @@
-Let's assign the **API_Key** retrieved from the previous step to a shell variable for easy reference. Copy the key to your clipboard and then click on the command below to fill it in the terminal. Once down, paste the key and press <kbd>Enter<kbd>
+Let's assign the **API_Key** retrieved from the previous step to a shell variable for easy reference. Copy the key to your clipboard and then click on the command below to fill it in the terminal. Then paste the key and press <kbd>Enter<kbd>
 
 `export API_KEY=`{{execute no-newline}}
 
