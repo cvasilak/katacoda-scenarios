@@ -16,11 +16,11 @@ Before starting the simulator and connect to Pelion Device Management, we need t
 3.  Enter a name of the key, select `Developers` as the Group and then click on the `Create API key` button:
     &nbsp;
     
-    ![alt text](https://i.ibb.co/VB9h92J/portal-create-api-key.png "API Keys")
+    ![alt text](https://i.ibb.co/VB9h92J/portal-create-api-key.png "Create API Key")
 
 4. The portal will then generate and display your API Key. Make sure to copy it in a safe place!
     &nbsp;
-    ![alt text](https://i.ibb.co/FHw5WFf/portal-api-key.png "API Keys")
+    ![alt text](https://i.ibb.co/FHw5WFf/portal-api-key.png "Display API Key")
 
 
 We are now ready to start the simulator! Click Continue to move to the next step.
