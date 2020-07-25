@@ -10,4 +10,4 @@ It takes some time for the command to finish since it needs to download the simu
 
 ![alt text](https://i.ibb.co/WNXpRzF/portal-sim-ready.png "Ready")
 
-We are now ready to access the simulator! Click Continue to move to the next step.
+We are now ready to visit the simulator page. Click Continue to move to the next step.
