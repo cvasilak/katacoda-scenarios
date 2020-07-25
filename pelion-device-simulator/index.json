@@ -6,13 +6,17 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Creating an API Key",
         "text": "step1.md",
         "code": "foreground.sh"
       },
       {
-        "title": "Step 2",
+        "title": "Launch Simulator",
         "text": "step2.md"
+      },
+      {
+        "title": "Simulator Walkthrough",
+        "text": "step3.md"
       }
     ],
     "intro": {
