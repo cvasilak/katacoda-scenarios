@@ -1,6 +1,6 @@
 > If you've already obtained an API Key from Pelion portal, feel free to skip to the next step.
 
-Before starting the simulator and connect to Pelion Device Management, we need to create an _API Key_ from the Pelion portal. The key would be used during bootstrapping to provision automatically a [developer certificate](https://www.pelion.com/docs/device-management/current/provisioning-process/provisioning-development-devices.html) on behalf of us and use it thereafter to connect to the device management service.
+Before starting the simulator and connect to Pelion Device Management, we need to create an _API Key_ from the Pelion portal. The key would be used during bootstrapping by the simulator to automatically provision a [developer certificate](https://www.pelion.com/docs/device-management/current/provisioning-process/provisioning-development-devices.html) on behalf of us and use it thereafter to connect to the device management service.
 
 > NOTE: If you've not yet created an account to Pelion IoT platform, please visit our [signup page](https://os.mbed.com/pelion-free-tier/?utm_source=pelion-homepage) and follow the instructions.
 
