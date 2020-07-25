@@ -24,4 +24,3 @@ Before starting the simulator and connect to Pelion Device Management, we need t
 
 
 We are now ready to start the simulator! Click Continue to move to the next step.
-
