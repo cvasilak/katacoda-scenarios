@@ -1,8 +1,11 @@
-# Step 2
-
 ## Launch Simulator
-`docker run -it --net host -e CLOUD_SDK_API_KEY=ak_1MDE1ODc3OGRhNTYwMDI0MjBhMDE0YzExMDAwMDAwMDA017227858f3d7a1e3dc12ae7000000006TyjLKpyMpgCIeATQYR1I0KKgpwsMFCw pelion/device-simulator`{{execute}}
+Let's assign the _API_Key_ retrieved from the previous step to a shell variable for easy reference:
 
+`export API_KEY=`{{execute no-newline}}
 
-# Access it
+We are now ready to launch the simulator:
+
+`docker run -it --net host -e CLOUD_SDK_API_KEY=$API_KEY pelion/device-simulator`{{execute}}
+
+### Access it
 [https://[[HOST_SUBDOMAIN]]-7829-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]]
