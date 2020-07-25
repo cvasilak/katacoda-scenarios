@@ -2,7 +2,7 @@ Visit the simulator page by clicking the `Simulator` tab at the top of the scree
 
 ![alt text](https://i.ibb.co/XtvtMPc/portal-simulator-tab.png "Simulator")
 
-> NOTE: If you are presented with a _"Can't connect"_ error message upon clicking on the tab, don't worry! Because the simulator takes some time to start, the platform timeouts attempting to connect. Click either the "Try Again" or hit the Refresh button ![alt text](https://i.ibb.co/YtMtg4x/refresh.png "Refresh") to manually connect.
+> NOTE: If you are presented with an _"Unable to connect"_ error message upon clicking on the tab, don't worry! Because the simulator takes some time to start, the platform timeouts attempting to connect. Click either the "Try Again" or hit the Refresh button ![alt text](https://i.ibb.co/YtMtg4x/refresh.png "Refresh") to manually connect.
 
 You should be presented with the following screen:
 
