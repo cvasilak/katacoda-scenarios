@@ -12,9 +12,11 @@ If you are new to Pelion, the platform provides a number of features:
 * Support for legacy protocols with the Pelion Edge gateway.
 * Device Management Portal and easy integration with enterprise systems using REST APIs.
 
-&nbsp;
-&nbsp;
-![alt text](https://www.pelion.com/docs/device-management/current/welcome/images/pelion-architecture.png "Pelion Architecture")
-
-
 **Let's get started !**
+
+&nbsp;
+&nbsp;
+![alt text](https://i.ibb.co/d0tyhZd/pelion-architecture.png "Pelion Architecture")
+
+
+
