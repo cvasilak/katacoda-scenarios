@@ -17,6 +17,10 @@
       {
         "title": "Simulator Walkthrough",
         "text": "step3.md"
+      },
+      {
+        "title": "Interacting with the device",
+        "text": "step4.md"
       }
     ],
     "intro": {
