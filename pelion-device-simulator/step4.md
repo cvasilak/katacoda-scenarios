@@ -13,7 +13,7 @@ The simulator exposes the **"button_count"** resource to track the number of but
 
 ![alt text](https://i.ibb.co/d4bKHHK/portal-console-simulated.png "Console")
 
-Click on the **"button_count"** resource to open the graph and see the current button press count. Notice that the graph updates itself periodically as the value of the **"button_count"** resource changes on the device:
+Click on the **"button_count"** resource to open the graph and see the current button press count. Notice that the graph updates itself periodically as the value of the resource changes on the device:
 
 ![alt text](https://i.ibb.co/XZr5D07/portal-button-count-graph.png "Button Count")
 
