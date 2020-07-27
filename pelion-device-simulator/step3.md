@@ -12,7 +12,7 @@ Notice the simulator printing out the **"Endpoint Name"** after the successfully
 
 If you now [visit the Device List](https://portal.mbedcloud.com/devices/list) in Pelion portal, it should display the device as <span style="color:green">'_Registered_'</span>
 
-![alt text](https://i.ibb.co/5KCYDSv/pelion-portal-connected.png "Connected")
+![alt text](https://i.ibb.co/5LYcT8X/pelion-portal-connected.png "Connected")
 
 Let's add a simulated LED component and connect it to the board. Click the `Add Component` button at the top of the screen:
 
