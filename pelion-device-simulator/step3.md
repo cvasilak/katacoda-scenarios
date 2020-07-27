@@ -9,3 +9,8 @@ You should be presented with the following screen:
 ![alt text](https://i.ibb.co/MkHfbbm/portal-simulator-connected.png "Connected")
 
 Notice the simulator printing out the **"Endpoint Name"** after the successfully connection to Pelion Device Management Service.
+
+If you now visit the [Device List](https://portal.mbedcloud.com/devices/list) in Pelion portal should display the device as '_Connected_'
+
+![alt text](https://i.ibb.co/5KCYDSv/pelion-portal-connected.png "Connected")
+
