@@ -9,17 +9,16 @@ Select the **Resources** tab to view the device's exposed LwM2M resources. Scrol
 
 ![alt text](https://i.ibb.co/FBLXdxy/portal-resources.png "Simulator")
 
-The simulator exposes the **"button_count"** resource to track the number of button presses occuring in the device. It actually simulates the button presses by periodically emitting the press event every 5 secs. Thus the _"Simulated.."_ log messages you see in the simulator console:
+The simulator exposes the **"button_count"** resource to track the number of button presses occuring in the device. It actually simulates the button presses by periodically emitting the press event every 5 secs, thus the _"Simulated.."_ log messages you see in the simulator console:
 
 ![alt text](https://i.ibb.co/d4bKHHK/portal-console-simulated.png "Console")
 
-Click on the **"button_count"** resource to open the graph and see the button press count:
+Click on the **"button_count"** resource to open the graph and see the current button press count. Notice that the graph updates itself periodically as the value of the **"button_count"** resource changes on the device:
 
 ![alt text](https://i.ibb.co/XZr5D07/portal-button-count-graph.png "Button Count")
 
 
-
-**"blink_action"** 
+The **"blink_action"** 
 
 
 **"blink_pattern"**
