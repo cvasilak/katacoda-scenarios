@@ -15,10 +15,16 @@ The simulator exposes the **"button_count"** resource to track the number of but
 
 Click on the **"button_count"** resource to open the graph and see the current button press count. Notice that the graph updates itself periodically as the value of the resource changes on the device:
 
+> NOTE: To minimize the network traffic, the device does not start sending notifications of Resource changes automatically. Instead, the Pelion portal _subscribed_ to the **"button_count"** resource on the device to _observe_ the changes, thus the _"Subscribed/Sent/Delivered"_ log messages you see in the simulator console.
+> 
+>![alt text](https://i.ibb.co/9pssQNK/portal-subscribed-log.png "Subscribe log")
+
 ![alt text](https://i.ibb.co/XZr5D07/portal-button-count-graph.png "Button Count")
 
 
-The **"blink_action"** 
+Close the dialog box and then click on **"blink_action"** resource to execute an operation on the device. In particular, when invoked the LED component on the device will start blinking. On the dialog box that appears, click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/GQnYHry/portal-post.png "Post") tab and click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Post")
+
+![alt text](https://i.ibb.co/mXS0xGH/portal-execute-operation.png "Execute")
 
 
 **"blink_pattern"**
