@@ -21,14 +21,14 @@ Click on the **"button_count"** resource to open the graph and see the current b
 
 ![alt text](https://i.ibb.co/XZr5D07/portal-button-count-graph.png "Button Count")
 
-
-Close the dialog box and then click on **"blink_action"** resource to execute an operation on the device. In particular, when invoked the LED component on the device will start blinking. On the dialog box that appears, click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/GQnYHry/portal-post.png "Post") tab and click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Post")
+Close the dialog box and then click on **"blink_action"** resource to execute an operation on the device. In particular, when invoked the LED component on the device will start blinking. On the dialog box that appears, click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/GQnYHry/portal-post.png "Post") tab and click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Send")
 
 ![alt text](https://i.ibb.co/mXS0xGH/portal-execute-operation.png "Execute")
 
 The LED component we added in the previous step starts blinking, and in the log console the received _"actuator"_ message from the portal is logged:
 
 ![alt text](https://i.ibb.co/d6w6hQm/pelion-execute-log.png "Execute log")
+
 
 
 **"blink_pattern"**
