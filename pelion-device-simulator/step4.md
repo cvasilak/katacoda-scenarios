@@ -34,9 +34,15 @@ The LED component we added in the previous step will start blinking, and in the 
 
 ## The Read / Write operation
 
-If you notice the log from the previous step, the simulator blinks the LED based on a pattern stored in its **"blink_pattern"** resource. Initially it is set to `500:500:500:500:500:500:500:500`, where each number represents the number of milliseconds the LED will stay on. Let's update this resource and lower the millisecond delay to make the blinking go faster.
+If you notice the log from the previous step, the simulator blinks the LED based on a pattern stored in its **"blink_pattern"** resource. Initially, it is set to `"500:500:500:500:500:500:500:500"`, where each number represents the number of milliseconds the LED will stay on. Let's update this resource and lower the millisecond delay to make the blinking go faster.
 
-Click on the **"blink_pattern"** resource to open the dialog that displays the current value:
+Click on the **"blink_pattern"** resource to open the dialog that displays the current value. Click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/qgZh1Mx/portal-put.png "Put") tab and change the value to `
+100:100:100:100:100:100:100:100`. Once done, click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Send"):
 
+![alt text](https://i.ibb.co/VxPGGGy/portal-write-resource.png "Write")
 
+Once the device receive the message, it logs it in the console and updates the value of the **"blink_pattern"** resource with the new value:
 
+![alt text](https://i.ibb.co/nr4sLzw/portal-write-log.png "Write log")
+
+If you now try to invoke again the **"blink_action"** resource from the previous step, the blinking of the LED should go faster!
