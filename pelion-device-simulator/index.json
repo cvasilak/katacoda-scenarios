@@ -33,11 +33,11 @@
   "environment": {
     "hideintro": false,
     "showdashboard": true,
-    "dashboards": [{"name": "Simulator", "port": 7829}],
+    "dashboards": [{"name": "Simulator", "port": 8888}],
     "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "ubuntu",
-    "port": 7829
+    "port": 8888
   }
 }
