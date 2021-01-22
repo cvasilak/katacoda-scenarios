@@ -7,7 +7,7 @@ If you are new to Pelion, the platform provides a number of features:
 
 * Secure connection for a wide range of device classes, including ultra-constrained, constrained, mainstream, rich nodes and gateways.
 * Flexible platform deployment options - from public clouds, like AWS, to on-premise deployments.
-* Complete lifecycle management, from factory provisioning, through secure device onboarding and robust device monitoring and control, to end-of-life device deletion.
+* Complete lifecycle management, from factory provisioning, through secure device onboarding and robust device monitoring and control, to end-of-life device decommission.
 * Secure firmware update services including delta updates suitable for low-bandwidth and mesh-based networks.
 * Support for legacy protocols with the Pelion Edge gateway.
 * Device Management Portal and easy integration with enterprise systems using REST APIs.
@@ -16,7 +16,7 @@ If you are new to Pelion, the platform provides a number of features:
 
 &nbsp;
 &nbsp;
-![alt text](https://i.ibb.co/d0tyhZd/pelion-architecture.png "Pelion Architecture")
+![alt text](https://i.ibb.co/7zKC7wk/pelion-architecture.png "Pelion Architecture")
 
 
 
