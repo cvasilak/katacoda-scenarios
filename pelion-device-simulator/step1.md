@@ -1,27 +1,44 @@
-> If you've already obtained an _API Key_ from Pelion portal, feel free to skip to the next step.
+> If you've already obtained an _Access Key_ from Pelion portal, feel free to skip to the next step.
 
-Before starting the simulator and connect to Pelion Device Management, we need to create an _API Key_ from the Pelion portal. The key would be used during bootstrapping by the simulator to automatically provision a [developer certificate](https://www.pelion.com/docs/device-management/current/provisioning-process/provisioning-development-devices.html) on behalf of us and use it thereafter to connect to the device management service.
+Before starting the virtual demo and connect to Pelion Device Management, we need to create an _Access Key_ from the Pelion portal. The key would be used during bootstrapping to automatically provision a [developer certificate](https://www.pelion.com/docs/device-management/current/provisioning-process/provisioning-development-devices.html) on behalf of us and use it thereafter to connect to the device management service.
 
-> NOTE: If you've not yet created an account to Pelion IoT platform, please visit our [signup page](https://os.mbed.com/pelion-free-tier/?utm_source=pelion-homepage) and follow the instructions.
+> NOTE: If you've not yet created an account to Pelion IoT platform, please visit our [signup page](https://os.mbed.com/pelion-free-tier/?utm_source=katacoda) and follow the instructions.
 
-1. [Login to Pelion portal](https://portal.mbedcloud.com/) and click on `Access Management-> API keys` section:
+1. [Login to Pelion portal](https://portal.mbedcloud.com/) and click on `Access Management-> Applications keys` section:
     &nbsp;
     
-    ![alt text](https://i.ibb.co/Y2NyLpL/portal-api-keys.png "API Keys")
+    ![alt text](https://i.ibb.co/6sJyF73/portal-apps.png "Applications")
 
-2.  in the upper right hand corner of the screen, click on the `New API Key` button:
+2.  In the upper right hand corner of the screen, click on the `New Application` button:
     &nbsp;
     
-    ![alt text](https://i.ibb.co/h7m4FYk/portal-new-key.png "New API key")
-    
-3.  Enter a name of the key, select `Developers` as the Group and then click on the `Create API key` button:
+    ![alt text](https://i.ibb.co/t4BFfGr/portal-new-app.png "New Application")
+
+3.  Enter a name of the application, select `Developers` as the Group and then click on the `Create Application` button:
     &nbsp;
     
-    ![alt text](https://i.ibb.co/VB9h92J/portal-create-api-key.png "Create API Key")
+    ![alt text](https://i.ibb.co/xFqD5yk/portal-create-app.png "Create Application")
+    
 
-4. The portal will then generate and display your API Key. Make sure to copy it in a safe place!
+4. Now that you 've created an application, you need to also create the Access Key bound to it. Click on `Access Management->Access Keys` section:
     &nbsp;
-    ![alt text](https://i.ibb.co/FHw5WFf/portal-api-key.png "Display API Key")
+    
+    ![alt text](https://i.ibb.co/YTzNvqZ/portal-access-keys.png "Access Keys")
+
+5.  In the upper right hand corner of the screen, click on the `New Access Key` button:
+    &nbsp;
+    
+    ![alt text](https://i.ibb.co/Ntr39tk/portal-new-key.png "New Access key")
+    
+6.  Enter a name of the key then select the application you created earlier and choose a future date as the Expiration. When finished, click on the `Create Access Key` button:
+    &nbsp;
+    
+    ![alt text](https://i.ibb.co/xJyhPFJ/portal-create-access-key.png "Create Access Key")
+
+7. The portal will then generate and display your Access Key. Make sure to copy it in a safe place!
+    &nbsp;
+
+    ![alt text](https://i.ibb.co/M57wVHQ/portal-access-key.png "Display Access Key")
 
 
-We are now ready to start the simulator! Click Continue to move to the next step.
+We are now ready to start the virtual demo! Click Continue to move to the next step.

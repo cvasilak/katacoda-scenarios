@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Creating an API Key",
+        "title": "Creating an Access Key",
         "text": "step1.md",
         "code": "foreground.sh"
       },
