@@ -11,7 +11,7 @@
         "code": "foreground.sh"
       },
       {
-        "title": "Launch Simulator",
+        "title": "Launch Virtual Demo",
         "text": "step2.md"
       },
       {
@@ -33,7 +33,7 @@
   "environment": {
     "hideintro": false,
     "showdashboard": true,
-    "dashboards": [{"name": "Simulator", "port": 8888}],
+    "dashboards": [{"name": "Virtual Demo", "port": 8888}],
     "uilayout": "terminal-iframe"
   },
   "backend": {
