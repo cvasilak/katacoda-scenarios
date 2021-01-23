@@ -25,6 +25,10 @@
       {
         "title": "Firmware Update",
         "text": "step5.md"
+      },
+      {
+        "title": "Start an update campaign",
+        "text": "step6.md"
       }
     ],
     "intro": {
