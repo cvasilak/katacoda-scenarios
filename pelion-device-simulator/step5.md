@@ -21,11 +21,15 @@ Let's change the firmware code running on the virtual device, to simulate a code
 
 4. Using `vi` editor open `main.cpp` and insert the following code to simulate a code change (insert at line :273):
 
-    `for (int i=0; i<5; i++) {
-    printf("!! new firmware !! \n");
-    }`{{execute}}
+    `vi main.cpp`{{execute}}
 
-    Save and exit
+    ```
+    for (int i=0; i<5; i++) {
+    printf("!! new firmware !! \n");
+    }
+    ```
+
+    Save and exit.
 
 5. Bootstrap a new development container of the virtual demo image to use it for building our new firmware. Notice that we local mount the credential sources and the manifest configuration we copied in step 3 above, so that they are available from inside the new container:
 
