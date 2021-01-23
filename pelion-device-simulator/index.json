@@ -21,6 +21,10 @@
       {
         "title": "Interacting with the device",
         "text": "step4.md"
+      },
+      {
+        "title": "Firmware Update",
+        "text": "step5.md"
       }
     ],
     "intro": {
