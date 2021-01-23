@@ -1,4 +1,4 @@
-The docker image comes already pre-configured with the necessary tools to perform a firmware update. In particular, build tools and the [manifest-tool](https://github.com/PelionIoT/manifest-tool) is included, to sign and produce a firmware manifest ready to be uploaded to Pelion portal to start an update campaign. 
+The docker image comes already pre-configured with the necessary tools to perform a firmware update. In particular, build tools and the [manifest-tool](https://github.com/PelionIoT/manifest-tool) is included to sign and produce a firmware manifest ready to be uploaded to Pelion portal to start an update campaign. 
 
 > NOTE: For more information about the importantance of manifest and the role it plays in the firmware update process, please consult our [documentation page](https://developer.pelion.com/docs/device-management/current/updating-firmware/firmware-manifests.html).
 
