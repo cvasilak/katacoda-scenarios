@@ -2,7 +2,7 @@ Your device is now connected to your Pelion Device Management account. Click on 
 
 ![alt text](https://i.ibb.co/NtzBDqW/portal-device-details.png "Simulator")
 
-The simulator exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to execute commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
+The simulator exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to invoke actuator commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
 
 Select the **Resources** tab in the Device details pane to view the device's exposed LwM2M resources. Scroll down to locate the **"blink_resource"**, **"pattern_resource"** and **"vibration_resource"** resources:
 
@@ -10,11 +10,11 @@ Select the **Resources** tab in the Device details pane to view the device's exp
 
 ## Subscribing to Resource changes
 
-The **"vibration_resource"** tracks the Vibration sensor readings emitted by the device. The value displayed in the LCD screen and the LwM2M resource should stay in-sync going forward. If you switch to the Terminal tab, the following log messages are periodically printed by the device, to verify the successfully delivery of the sensor reading to Pelion service:
+The **"vibration_resource"** tracks the Vibration sensor readings emitted by the device. The value displayed in the LCD screen and the LwM2M resource should stay in-sync going forward. If you switch to the Terminal tab, the following log messages are periodically printed by the device to verify the successfully delivery of the sensor reading to Pelion service:
 
 ![alt text](https://i.ibb.co/1Z9Qk7H/portal-console-simulated.png "Console")
 
-Click on the **"vibration_resource"** to open the graph and see the current value. Notice that the graph updates itself periodically as the value of the resource changes on the device:
+Click on the **"vibration_resource"** to view a graphical representation of the current value. Notice that the graph updates itself periodically as the value of the resource changes on the device:
 
 > NOTE: To minimize the network traffic, the device does not start sending notifications of Resource changes automatically. Instead, the Pelion portal _subscribed_ to the **"vibration_resource"** on the device to _observe_ the changes, thus the _"Subscribed"_ log message you see in the console:
 > 
@@ -22,7 +22,7 @@ Click on the **"vibration_resource"** to open the graph and see the current valu
 
 ![alt text](https://i.ibb.co/P9MrFr1/portal-vibration-graph.png "Button Count")
 
-Now, click the ![alt text](https://i.ibb.co/HhBs0Yq/shake-btn.png "Send") button to put the demo device into a high vibration mode and you can see the larger vibration readings coming through to Pelion!
+Now, click the ![alt text](https://i.ibb.co/m0fd8RT/shake-btn.png "Shake") button to put the demo device into a high vibration mode and you can see the larger vibration readings coming through to Pelion!
 
 ## The Execute operation
 
