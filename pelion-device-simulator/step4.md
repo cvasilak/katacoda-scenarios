@@ -1,48 +1,56 @@
-Your device is now connected to your Pelion Device Management account. Click on the device ID to view all its information:
+Your device is now connected to your Pelion Device Management account. Click on the device ID to reveal more information:
 
-![alt text](https://i.ibb.co/Mcn0yCx/portal-device-list.png "Simulator")
+![alt text](https://i.ibb.co/NtzBDqW/portal-device-details.png "Simulator")
 
-The simulator exposes a number of LwM2M resources. LwM2M stands for _"Lightweight Machine to Machine"_ and is the protocol IoT devices use to communicate with the server to receive and execute commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
+The simulator exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to execute commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
 
-Select the **Resources** tab to view the device's exposed LwM2M resources. Scroll down to locate the **"button_count"**, **"blink_action"** and **"blink_pattern"** resources:
+Select the **Resources** tab in the Device details pane to view the device's exposed LwM2M resources. Scroll down to locate the **"blink_resource"**, **"pattern_resource"** and **"vibration_resource"** resources:
 
-![alt text](https://i.ibb.co/FBLXdxy/portal-resources.png "Simulator")
+![alt text](https://i.ibb.co/ZHJjpkr/portal-resources.png "Simulator")
 
 ## Subscribing to Resource changes
 
-The **"button_count"** resource tracks the number of button presses occuring in the device. It actually simulates the button presses by periodically emitting the _'press event'_ every 5 secs, thus the _"Simulated.."_ log messages you see in the console:
+The **"vibration_resource"** tracks the Vibration sensor readings emitted by the device. The value displayed in the LCD screen and the LwM2M resource should stay in-sync going forward. If you switch to the Terminal tab, the following log messages are periodically printed by the device, to verify the successfully delivery of the sensor reading to Pelion service:
 
-![alt text](https://i.ibb.co/d4bKHHK/portal-console-simulated.png "Console")
+![alt text](https://i.ibb.co/1Z9Qk7H/portal-console-simulated.png "Console")
 
-Click on the **"button_count"** resource to open the graph and see the current button press count. Notice that the graph updates itself periodically as the value of the resource changes on the device:
+Click on the **"vibration_resource"** to open the graph and see the current value. Notice that the graph updates itself periodically as the value of the resource changes on the device:
 
-> NOTE: To minimize the network traffic, the device does not start sending notifications of Resource changes automatically. Instead, the Pelion portal _subscribed_ to the **"button_count"** resource on the device to _observe_ the changes, thus the _"Subscribed/Sent/Delivered"_ log messages you see in the console:
+> NOTE: To minimize the network traffic, the device does not start sending notifications of Resource changes automatically. Instead, the Pelion portal _subscribed_ to the **"vibration_resource"** on the device to _observe_ the changes, thus the _"Subscribed"_ log message you see in the console:
 > 
->![alt text](https://i.ibb.co/9pssQNK/portal-subscribed-log.png "Subscribe log")
+>![alt text](https://i.ibb.co/6WrRGqR/portal-subscribed-log.png "Subscribe log")
 
-![alt text](https://i.ibb.co/XZr5D07/portal-button-count-graph.png "Button Count")
+![alt text](https://i.ibb.co/P9MrFr1/portal-vibration-graph.png "Button Count")
+
+Now, click the ![alt text](https://i.ibb.co/HhBs0Yq/shake-btn.png "Send") button to put the demo device into a high vibration mode and you can see the larger vibration readings coming through to Pelion!
 
 ## The Execute operation
 
-Close the dialog box and then click on **"blink_action"** resource to execute an operation on the device. In particular, when invoked the LED component on the device will start blinking. On the dialog box that appears, click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/GQnYHry/portal-post.png "Post") tab and click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Send")
+Close the dialog box and then click on **"blink_resource"** resource to execute an operation on the device. In particular, when invoked the LED component on the device will start blinking. On the dialog box that appears, click the edit ![alt text](https://i.ibb.co/Yhr1vDH/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/YchBzn5/portal-post.png "Post") tab and click ![alt text](https://i.ibb.co/42LHD2s/portal-send.png "Send")
 
 ![alt text](https://i.ibb.co/mXS0xGH/portal-execute-operation.png "Execute")
 
-The LED component we added in the previous step will start blinking, and in the log console the received _"actuator"_ message from the portal is logged:
+When the device receives the message, the LED component will start blinking!
 
-![alt text](https://i.ibb.co/d6w6hQm/pelion-execute-log.png "Execute log")
+![alt text](https://i.ibb.co/xMbvB0y/blinking-action.gif "Execute log")
+
+and in the log console the received _"actuator"_ message from the portal is logged:
+
+![alt text](https://i.ibb.co/93qc886/pelion-execute-log.png "Execute log")
 
 ## The Read / Write operation
 
-If you notice the log from the previous step, the simulator blinks the LED based on a pattern stored in its **"blink_pattern"** resource. Initially, it is set to `"500:500:500:500:500:500:500:500"`, where each number represents the number of milliseconds the LED will stay on. Let's update this resource and lower the millisecond delay to make the blinking go faster.
+The device blinks the LED based on a pattern stored in its **"pattern_resource"**. Initially, it is set to `"500:500:500:500:500:500:500:500"`, where each number represents the number of milliseconds the LED will stay on. Let's update this resource and lower the millisecond delay to make the blinking go faster!
 
-Click on the **"blink_pattern"** resource to open the dialog that displays the current value. Click the edit ![alt text](https://i.ibb.co/Yhxffdb/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/qgZh1Mx/portal-put.png "Put") tab and change the value to `
-100:100:100:100:100:100:100:100`. Once done, click ![alt text](https://i.ibb.co/h8QRChy/portal-send.png "Send"):
+Click on the **"pattern_resource"** resource to open the dialog that displays the current value. Click the edit ![alt text](https://i.ibb.co/Yhr1vDH/portal-edit.png "Edit") button, select the ![alt text](https://i.ibb.co/5rVrVv4/portal-put.png "Put") tab and change the value to `
+100:100:100:100:100:100:100:100`. Once done, click ![alt text](https://i.ibb.co/42LHD2s/portal-send.png "Send"):
 
 ![alt text](https://i.ibb.co/VxPGGGy/portal-write-resource.png "Write")
 
-Once the device receive the message, it logs it in the console and updates the value of the **"blink_pattern"** resource with the new value:
+Once the device receive the message, it logs it in the console and updates the value of the **"pattern_resource"** with the new value:
 
-![alt text](https://i.ibb.co/nr4sLzw/portal-write-log.png "Write log")
+![alt text](https://i.ibb.co/JzNk522/portal-write-log.png "Write log")
 
-If you now try to invoke again the **"blink_action"** resource from the previous step, the blinking of the LED should go faster!
+If you now try to invoke again the **"blink_resource"** from the previous step, the blinking of the LED should go faster!
+
+Now that we have demonstrated basic interactions with the device, let's update the running firmware to a new version. Click Continue to move to the next step.
