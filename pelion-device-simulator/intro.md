@@ -1,7 +1,7 @@
 # Introduction
 Welcome to Pelion Device Management Connection Tutorial !
 
-In this tutorial you'll securely connect a simulated board to [Pelion Device Management](https://www.pelion.com/iot-device-management/) and interact with it using the portal. The purpose is to quickly demonstrate available functionality even if you don't own hardware but still want to experience the features of the platform. 
+In this tutorial you'll securely connect a virtual device that contains a vibration sensor to [Pelion Device Management](https://www.pelion.com/iot-device-management/) and interact with it using the portal. The purpose is to quickly demonstrate available functionality, even if you don't own hardware but still want to experience the features of the platform. 
 
 If you are new to Pelion, the platform provides a number of features:
 
