@@ -4,7 +4,7 @@ Before starting the virtual demo and connect to Pelion Device Management, we nee
 
 > NOTE: If you've not yet created an account to Pelion IoT platform, please visit our [signup page](https://os.mbed.com/pelion-free-tier/?utm_source=katacoda) and follow the instructions.
 
-1. [Login to Pelion portal](https://portal.mbedcloud.com/) and click on `Access Management-> Applications keys` section:
+1. [Login to Pelion portal](https://portal.mbedcloud.com/) and click on `Access Management-> Applications` section:
     &nbsp;
     
     ![alt text](https://i.ibb.co/6sJyF73/portal-apps.png "Applications")
