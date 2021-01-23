@@ -1,8 +1,8 @@
 {
-  "title": "Pelion Device Management Connection Tutorial",
+  "title": "Pelion Device Management Tutorial",
   "description": "A tutorial to interact with Pelion Device Management using a virtual device.",
   "difficulty": "Beginner",
-  "time": "15 minutes",
+  "time": "30 minutes",
   "details": {
     "steps": [
       {
