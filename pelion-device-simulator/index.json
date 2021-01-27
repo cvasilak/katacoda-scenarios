@@ -27,8 +27,12 @@
         "text": "step5.md"
       },
       {
-        "title": "Start an update campaign",
+        "title": "Building a Delta Firmware",
         "text": "step6.md"
+      },
+      {
+        "title": "Start an update campaign",
+        "text": "step7.md"
       }
     ],
     "intro": {

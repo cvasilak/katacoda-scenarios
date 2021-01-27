@@ -1,4 +1,4 @@
-Now that our environment is setup, we are ready to build the new firmware and start an update campaign:
+Now that our environment is setup, we are ready to build the new firmware and prepare for an update campaign:
 
 1. Switch to the firmware source code directory:
 
@@ -13,81 +13,40 @@ Now that our environment is setup, we are ready to build the new firmware and st
     ```
     $ ls -l /build/mbed-cloud-client-example/__x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf
 
-    -rwxr-xr-x 1 root root 6562112 Jan 19 14:32 /build/mbed-cloud-client-example/__x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf
+    -rwxr-xr-x 1 root root 6562160 Jan 27 10:42 mbedCloudClientExample.elf
     ```
 
-4. We now need to genarate the firmware manifest describing the update, upload it to the portal and start the update campaign. The `manifest-tool` can conveniently perform all this in one step. Simple execute:
+4. Copy the new firmware to `firmwares/` directory:
 
-    `manifest-dev-tool update -p __x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf -w -n -v 0.2.0`{{execute}}
-    
-    Upon executing the command, notice the firmware binary being uploaded to Pelion, the generation of the manifest and the starting of the update campaign: 
+    `cp __x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf firmwares/new_fw.bin`{{execute}}
 
-    ```
-    INFO FW version: 0.2.0
-    INFO Uploading FW image __x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf
-    INFO Uploaded FW image http://firmware-catalog-media-ca57.s3.
-    INFO Vendor-ID: f214c5a40a7c41588f4a8f2357880e4a
-    INFO Class-ID: 66eb99760e98456d8436dc223c7332ff
-    INFO Created manifest in v3 schema for full update campaign
-    INFO Uploaded manifest ID: 01771ad664fd0000000000010010028e
-    INFO Created Campaign ID: 01771ad6669b00000000000100100323
-    INFO Started Campaign ID: 01771ad6669b00000000000100100323
-    INFO Campaign state: publishing
-    INFO Campaign state: autostopped
-    INFO Campaign is finished in state: autostopped
-    INFO ----------------------------
-    INFO     Campaign Summary
-    INFO ----------------------------
-    INFO  Successfully updated:   1
-    INFO  Failed to update:       0
-    INFO  Skipped:                0
-    INFO  Pending:                0
-    INFO  Total in this campaign: 1
-    ```
-
-    If you switch to the first terminal, notice that the device logs the downloading of the new firmware, the verification of the manifest and the successfull update: 
+5. The `firmwares/` directory should now contain both the new firmware(`new_fw.bin`) and the current running one(`current_fw.bin`):
 
     ```
-    [FOTA INFO] fota.c:596: Firmware update initiated.
-    [FOTA DEBUG] fota.c:628: Pelion FOTA manifest is valid
-    [FOTA DEBUG] fota.c:651: get manifest : curr version 131072, new version 196608
-    ...
-    ...
-    [FOTA DEBUG] fota.c:555: Download Authorization requested
-    [FOTA] ---------------------------------------------------
-    [FOTA] Updating component MAIN from version 0.0.0 to 0.2.0
-    [FOTA] Update priority 0
-    [FOTA] Update size 6562112B
-    [FOTA] ---------------------------------------------------
-    [FOTA] Download authorization granted
-    ...
-    [FOTA] Downloading firmware. 0%
-    [FOTA] Downloading firmware. 5%
-    [FOTA] Downloading firmware. 10%
-    [FOTA] Downloading firmware. 15%
-    ...
-    [FOTA INFO] fota.c:804: Installing new version for component MAIN
-    [FOTA INFO] fota_candidate.c:224: Found an encrypted image at address 0x0
-    [FOTA INFO] fota_candidate.c:416: Validating image...
-    [FOTA INFO] fota_candidate.c:461: Image is valid.
-    [FOTA INFO] fota_component.c:189: Installing MAIN component
-    [FOTA] Successfully installed MAIN component
-    ...
-    [FOTA INFO] fota.c:725: Rebooting.
-    !! new firmware !!
-    !! new firmware !!
-    !! new firmware !!
-    !! new firmware !!
-    !! new firmware !!
-    In single-partition mode.
-    Creating path ./pal
-    Start Device Management Client
+    ls -lh firmwares/
+
+    total 12824
+    -rwxr-xr-x 1 1000 1000 6562120 Jan 27 10:30 current_fw.bin
+    -rwxr-xr-x 1 root root 6562160 Jan 27 10:43 new_fw.bin
     ```
 
-    This is also reflected in Pelion update campaign dashboard, showing the successfull completion of the update:
+6. We are now ready to generate a delta firmware using the `manifest-delta-tool`:
 
-    ![alt text](https://i.ibb.co/bPyvFw8/portal-campaign-dashboard.png "Plus")
+    `manifest-delta-tool -c firmwares/current_fw.bin -n firmwares/new_fw.bin -o firmwares/delta-patch.bin`{{execute}}
 
-    and the device displays the new firmware version (0.2.0 in our case):
+    We should get the following output upon successfully completion:
 
-    ![alt text](https://i.ibb.co/dp1fMYf/device-fw-version.png "Plus")
+    ```
+    2021-01-27 10:44:30,382 INFO Current tool version PELION/BSDIFF001
+    Wrote diff file firmwares/delta-patch.bin, size 353657. Max undeCompressBuffer frame size was 512, max deCompressBuffer frame size was 222.
+    ```
+
+    If we list the directory contents, we can verify the producing of the `delta-patch.bin` firmware. Notice the significant shrinkage in size, from 6.3MB of a full firmware image down to a delta of 346K!
+
+    ```
+    ls -l firmwares/delta-patch.bin
+
+    -rw-r--r-- 1 root root  353657 Jan 27 10:44 delta-patch.bin
+    ```
+
+Now that our new firmware is produced, we are ready to start an update campaign. Click Continue to move to the next step.
