@@ -24,14 +24,12 @@ Let's change the firmware code running on the virtual device, to simulate a code
     `mkdir firmwares && \
     docker cp pelion-demo:/build/mbed-cloud-client-example/__x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf ./firmwares/current_fw.bin`{{execute}}
 
-5. Using `vi` editor open `main.cpp` and insert the following code to simulate a code change (insert at line :273):
+5. Let's alter the emitted simulated vibration value sent by the virtual demo to be multipled by 1000. Using `vi` editor, open `source/blinky.cpp` and change the line to the following (line :295):
 
-    `vi main.cpp`{{execute}}
+    `vi source/blinky.cpp`{{execute}}
 
     ```
-    for (int i=0; i<5; i++) {
-        printf("!! new firmware !! \n");
-    }
+    _sensed_count = randomvib * 1000;
     ```
 
     Save and exit.
@@ -39,7 +37,7 @@ Let's change the firmware code running on the virtual device, to simulate a code
 6. Bootstrap a new development container of the virtual demo image to use it for building our new firmware. Notice that we local mount the credential sources, the manifest configuration and the running firmware folder we copied in step 3 above, so that they are available from inside the new container:
 
     `docker run -it --name pelion-demo-dev \
-    -v $(pwd)/main.cpp:/build/mbed-cloud-client-example/main.cpp \
+    -v $(pwd)/source/blinky.cpp:/build/mbed-cloud-client-example/source/blinky.cpp \
     -v $(pwd)/mbed_cloud_dev_credentials.c:/build/mbed-cloud-client-example/mbed_cloud_dev_credentials.c \
     -v $(pwd)/update_default_resources.c:/build/mbed-cloud-client-example/update_default_resources.c \
     -v $(pwd)/.manifest-dev-tool/:/build/mbed-cloud-client-example/.manifest-dev-tool/ \

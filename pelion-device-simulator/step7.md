@@ -39,7 +39,7 @@ If you switch to the first terminal, notice in the device logs the downloading o
 [FOTA] ---------------------------------------------------
 [FOTA] Updating component MAIN from version 0.0.0 to 0.2.0
 [FOTA] Update priority 0
-[FOTA] Delta update. Patch size 353657B full image size 6562160B
+[FOTA] Delta update. Patch size 245215B full image size 6562120B
 [FOTA] ---------------------------------------------------
 [FOTA] Download authorization granted
 ...
@@ -62,11 +62,6 @@ If you switch to the first terminal, notice in the device logs the downloading o
 [FOTA] Successfully installed MAIN component
 ...
 [FOTA INFO] fota.c:725: Rebooting.
-!! new firmware !! 
-!! new firmware !! 
-!! new firmware !! 
-!! new firmware !! 
-!! new firmware !! 
 In single-partition mode.
 Creating path ./pal
 Start Device Management Client
@@ -80,3 +75,5 @@ This is also reflected in Pelion update campaign dashboard, showing the successf
 and the device displays the new firmware version (0.2.0 in our case):
 
 ![alt text](https://i.ibb.co/dp1fMYf/device-fw-version.png "Plus")
+
+Notice now that the vibration sensor values sent by the device are indeed multipled by 1000 marking the successfull firmware update!

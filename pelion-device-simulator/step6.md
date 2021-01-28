@@ -13,7 +13,7 @@ Now that our environment is setup, we are ready to build the new firmware and pr
     ```
     $ ls -l /build/mbed-cloud-client-example/__x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf
 
-    -rwxr-xr-x 1 root root 6562160 Jan 27 10:42 mbedCloudClientExample.elf
+    -rwxr-xr-x 1 root root 6562120 Jan 27 10:42 mbedCloudClientExample.elf
     ```
 
 4. Copy the new firmware to `firmwares/` directory:
@@ -27,7 +27,7 @@ Now that our environment is setup, we are ready to build the new firmware and pr
 
     total 12824
     -rwxr-xr-x 1 1000 1000 6562120 Jan 27 10:30 current_fw.bin
-    -rwxr-xr-x 1 root root 6562160 Jan 27 10:43 new_fw.bin
+    -rwxr-xr-x 1 root root 6562120 Jan 27 10:43 new_fw.bin
     ```
 
 6. We are now ready to generate a delta firmware using the `manifest-delta-tool`:
@@ -38,15 +38,15 @@ Now that our environment is setup, we are ready to build the new firmware and pr
 
     ```
     2021-01-27 10:44:30,382 INFO Current tool version PELION/BSDIFF001
-    Wrote diff file firmwares/delta-patch.bin, size 353657. Max undeCompressBuffer frame size was 512, max deCompressBuffer frame size was 222.
+    Wrote diff file firmwares/delta-patch.bin, size 245215. Max undeCompressBuffer frame size was 512, max deCompressBuffer frame size was 189.
     ```
 
-    If we list the directory contents, we can verify the producing of the `delta-patch.bin` firmware. Notice the significant shrinkage in size, from 6.3MB of a full firmware image down to a delta of 346K!
+    If we list the directory contents, we can verify the producing of the `delta-patch.bin` firmware. Notice the significant shrinkage in size, from 6.3MB of a full firmware image, down to a delta of 240K!
 
     ```
     ls -l firmwares/delta-patch.bin
 
-    -rw-r--r-- 1 root root  353657 Jan 27 10:44 delta-patch.bin
+    -rw-r--r-- 1 root root  245215 Jan 27 10:44 delta-patch.bin
     ```
 
 Now that our new firmware is produced, we are ready to start an update campaign. Click Continue to move to the next step.
