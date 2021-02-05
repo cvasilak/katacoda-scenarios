@@ -1,12 +1,12 @@
 Your device is now connected to your Pelion Device Management account. Click on the device ID to reveal more information:
 
-![alt text](https://i.ibb.co/NtzBDqW/portal-device-details.png "Simulator")
+![alt text](https://i.ibb.co/NtzBDqW/portal-device-details.png "Pelion Virtual Demo")
 
-The simulator exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to invoke actuator commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
+The tool exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, efficient, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to invoke actuator commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
 
 Select the **Resources** tab in the Device details pane to view the device's exposed LwM2M resources. Scroll down to locate the **"blink_resource"**, **"pattern_resource"** and **"vibration_resource"** resources:
 
-![alt text](https://i.ibb.co/ZHJjpkr/portal-resources.png "Simulator")
+![alt text](https://i.ibb.co/ZHJjpkr/portal-resources.png "Pelion Virtual Demo")
 
 ## Subscribing to Resource changes
 

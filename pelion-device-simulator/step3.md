@@ -1,6 +1,6 @@
 Visit the demo page by clicking the `Virtual Demo` tab at the top of the screen:
 
-![alt text](https://i.ibb.co/svJ6zP2/portal-simulator-tab.png "Simulator")
+![alt text](https://i.ibb.co/svJ6zP2/portal-simulator-tab.png "Pelion Virtual Demo")
 
 > NOTE: If you are presented with an _"Unable to connect"_ error message upon clicking on the tab, don't worry! Because the container image takes some time to start, the platform timeouts attempting to connect. Click either the "Try Again" link or hit the Refresh button ![alt text](https://i.ibb.co/YtMtg4x/refresh.png "Refresh") to manually connect.
 
