@@ -6,7 +6,7 @@ We are now ready to launch the virtual demo. Click on the command below to launc
 
 `docker run -it --name pelion-demo --net host -e CLOUD_SDK_API_KEY=$ACCESS_KEY pelion/virtual-demo`{{execute}}
 
-It takes some time for the command to finish since it needs to download the virtual-demo image, retrieve the developer certificate from Pelion portal and then proceed to build the application. Once it finishes, it would print out the following in the console, marking a successfully connection to Pelion Device Management service:
+It takes some time for the command to finish since it needs to download the virtual-demo image, retrieve the developer certificate from Pelion portal and then proceed to build the application. Once it finishes, it would print out the following in the console, marking a successful connection to Pelion Device Management service:
 
 ![alt text](https://i.ibb.co/fYbR7ff/portal-demo-ready.png "Ready")
 

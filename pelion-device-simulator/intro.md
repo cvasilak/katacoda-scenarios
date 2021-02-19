@@ -1,7 +1,7 @@
 # Introduction
-Welcome to Pelion Device Management Tutorial !
+Welcome to Pelion Device Management Tutorial!
 
-In this tutorial you'll securely connect a virtual device that contains a vibration sensor to [Pelion Device Management](https://www.pelion.com/iot-device-management/) and interact with it using the portal. Further, you'll build a new firmware image and apply a delta update on the device by starting an update campaign.
+In this tutorial, you'll securely connect a virtual device that contains a vibration sensor to [Pelion Device Management](https://www.pelion.com/iot-device-management/) and interact with it using the portal. Further, you'll build a new firmware image and apply a delta update on the device by starting an update campaign.
 
 The purpose is to quickly demonstrate available functionality, even if you don't own a [Pelion Ready](https://developer.pelion.com/boards/) hardware but still want to experience the features of the platform. 
 

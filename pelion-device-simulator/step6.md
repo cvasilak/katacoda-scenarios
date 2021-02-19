@@ -1,4 +1,4 @@
-Now that our environment is setup, we are ready to build the new firmware and prepare for an update campaign:
+Now that our environment is set up, we are ready to build the new firmware and prepare for an update campaign:
 
 1. Switch to the firmware source code directory:
 
@@ -20,7 +20,7 @@ Now that our environment is setup, we are ready to build the new firmware and pr
 
     `cp __x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf firmwares/new_fw.bin`{{execute}}
 
-5. The `firmwares/` directory should now contain both the new firmware(`new_fw.bin`) and the current running one(`current_fw.bin`):
+5. The `firmwares/` directory should now contain both the new firmware(`new_fw.bin`) and the currently running one(`current_fw.bin`):
 
     ```
     ls -lh firmwares/

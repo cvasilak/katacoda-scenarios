@@ -2,7 +2,7 @@ Your device is now connected to your Pelion Device Management account. Click on 
 
 ![alt text](https://i.ibb.co/NtzBDqW/portal-device-details.png "Pelion Virtual Demo")
 
-The tool exposes a number of LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, efficient, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to invoke actuator commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
+The tool exposes a several LwM2M resources. LwM2M stands for [_"Lightweight Machine to Machine"_](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) and is an open, efficient, vendor-neutral and standardized device management protocol ([spec](http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf)) IoT devices use to communicate with the server to send telemetry data and to invoke actuator commands. _"Resources"_ is the name LwM2M gives to the readable and controllable aspects of IoT devices, such as their sensors.
 
 Select the **Resources** tab in the Device details pane to view the device's exposed LwM2M resources. Scroll down to locate the **"blink_resource"**, **"pattern_resource"** and **"vibration_resource"** resources:
 
@@ -47,7 +47,7 @@ Click on the **"pattern_resource"** resource to open the dialog that displays th
 
 ![alt text](https://i.ibb.co/VxPGGGy/portal-write-resource.png "Write")
 
-Once the device receive the message, it logs it in the console and updates the value of the **"pattern_resource"** with the new value:
+Once the device receives the message, it logs it in the console and updates the value of the **"pattern_resource"** with the new value:
 
 ![alt text](https://i.ibb.co/JzNk522/portal-write-log.png "Write log")
 

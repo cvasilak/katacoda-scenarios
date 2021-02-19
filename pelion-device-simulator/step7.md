@@ -1,4 +1,4 @@
-We now need to genarate the firmware manifest describing the update, upload it to the portal and start the update campaign. The `manifest-tool` can conveniently perform all this in one step. Simple execute:
+We now need to generate the firmware manifest describing the update, upload it to the portal and start the update campaign. The `manifest-tool` can conveniently perform all this in one step. Simply execute:
 
 `manifest-dev-tool update -p firmwares/delta-patch.bin -w -n -v 0.2.0`{{execute}}
     
@@ -27,7 +27,7 @@ INFO  Pending:                0
 INFO  Total in this campaign: 1
 ```
 
-If you switch to the first terminal, notice in the device logs the downloading of the new firmware, the verification of the manifest and the successfull delta update: 
+If you switch to the first terminal, notice in the device logs the downloading of the new firmware, the verification of the manifest and the successful delta update: 
 
 ```
 [FOTA INFO] fota.c:596: Firmware update initiated.
@@ -68,7 +68,7 @@ Start Device Management Client
 ...
 ```
 
-This is also reflected in Pelion update campaign dashboard, showing the successfull completion of the update:
+This is also reflected in Pelion update campaign dashboard, showing the successful completion of the update:
 
 ![alt text](https://i.ibb.co/bPyvFw8/portal-campaign-dashboard.png "Plus")
 
@@ -76,4 +76,4 @@ and the device displays the new firmware version (0.2.0 in our case):
 
 ![alt text](https://i.ibb.co/dp1fMYf/device-fw-version.png "Plus")
 
-Notice now that the vibration sensor values sent by the device are indeed multipled by 1000 marking the successfull firmware update!
+Notice now that the vibration sensor values sent by the device are indeed multiplied by 1000 marking the successful firmware update!
