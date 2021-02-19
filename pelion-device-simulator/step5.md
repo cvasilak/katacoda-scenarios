@@ -24,12 +24,12 @@ Let's change the firmware code running on the virtual device, to simulate a code
     `mkdir firmwares && \
     docker cp pelion-demo:/build/mbed-cloud-client-example/__x86_x64_NativeLinux_mbedtls/Debug/mbedCloudClientExample.elf ./firmwares/current_fw.bin`{{execute}}
 
-5. Let's alter the emitted simulated vibration value sent by the virtual demo to be multiplied by 1000. Using `vi` editor, open `source/blinky.cpp` and change the line to the following (line :295):
+5. Let's alter the emitted simulated vibration value sent by the virtual demo to be multiplied by 1000. Using `vi` editor, open `source/blinky.cpp`, navigate to line `:307` and add the following line:
 
     `vi source/blinky.cpp`{{execute}}
 
     ```
-    _sensed_count = randomvib * 1000;
+    _sensed_count = _sensed_count * 1000;
     ```
 
     Save and exit.
